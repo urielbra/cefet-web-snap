@@ -27,16 +27,17 @@
   box-shadow: 0 0 0 1px darkgoldenrod;
 }
 
-.marcacao.formato-oval {
+.marcacao[data-formato="formato-oval"] {
   border-radius: 50%;
 }
 
-.marcacao.formato-retangular {
+.marcacao[data-formato="formato-retangular"] {
   border-radius: 0;
 }
 
 .marcacoes-ocultas .marcacao {
-  /* --- Exercício 0 --- */
+  display: none;
+  pointer-events: none;
 }
 
 
