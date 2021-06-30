@@ -55,17 +55,16 @@ marcacoes.forEach(el => {
 const inputs = document.querySelectorAll('input, textarea');
 
 const controlsToSelected = (el) => {
-
-    marcacaoSelecionada.style.left = x_el.value + 'px';
-    marcacaoSelecionada.style.top = y_el.value + 'px';
-    marcacaoSelecionada.style.width = largura_el.value + 'px';
-    marcacaoSelecionada.style.height = altura_el.value + 'px';
-    marcacaoSelecionada.dataset.titulo = titulo_el.value;
-    marcacaoSelecionada.dataset.conteudo = conteudo_el .value;
-    marcacaoSelecionada.dataset.cor = cor_el.value;
-    console.log('oi')
-    marcacaoSelecionada.dataset.formato = document.querySelector(`[name="formato-da-marcacao"]:checked`).value;
-   
+    if(marcacaoSelecionada){
+        marcacaoSelecionada.style.left = x_el.value + 'px';
+        marcacaoSelecionada.style.top = y_el.value + 'px';
+        marcacaoSelecionada.style.width = largura_el.value + 'px';
+        marcacaoSelecionada.style.height = altura_el.value + 'px';
+        marcacaoSelecionada.dataset.titulo = titulo_el.value;
+        marcacaoSelecionada.dataset.conteudo = conteudo_el .value;
+        marcacaoSelecionada.dataset.cor = cor_el.value;
+        marcacaoSelecionada.dataset.formato = document.querySelector(`[name="formato-da-marcacao"]:checked`).value;
+    }
 }
 
 inputs.forEach(el => {
